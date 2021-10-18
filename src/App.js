@@ -4,7 +4,7 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Profiles from './Components/Profiles'
 import Header from './Components/Header'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 function App() {
