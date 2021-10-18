@@ -2,10 +2,15 @@ body{
     background-color: #303b5a;
 }
 
+.profile-container{
+    float:left;
+}
+
 .profile{
     width:25%;
     height:25%;
     float:left;
+    padding-left: 5vw;
 }
 
 h1{
@@ -16,4 +21,8 @@ h1{
 h2{
     font-weight: 700;
     text-decoration: underline solid rgb(0, 0, 0);
+}
+
+.News{
+    float:1;
 }

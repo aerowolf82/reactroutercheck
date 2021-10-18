@@ -9,7 +9,16 @@
 }
 
 .Nav{
-  padding-left: 25vw;
+  float: none;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
