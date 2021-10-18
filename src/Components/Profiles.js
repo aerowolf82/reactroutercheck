@@ -3,35 +3,35 @@ import { Switch, Route, Link, useRouteMatch} from "react-router-dom";
 import './Profiles.css';
 
 
-function Profiles() {
+function Profiles({siteData}) {
     let match = useRouteMatch();
     return (
-        <div>
-            <header>
-                <h1>
-                    Product List
-                </h1>
-                <button className="Button">
-                    <Link to={`${match.url}/1`}>Product 1</Link>
-                </button>
-                <button className="Button">
-                    <Link to={`${match.url}/2`}>Product 2</Link>
-                </button>
-                <button className="Button">
-                    <Link to={`${match.url}/3`}>Product 3</Link>
-                </button>
-            </header>
-
-            <Switch>
-                <Route path={`${match.path}/:topicId`}>
-                    <IndivProfile />
-                </Route>
-                <Route exact path={match.path}>
-                    <h3>Please select a Profile.</h3>
-                </Route>
-            </Switch>
+        <div style={{ display: "flex" }}>
+            <div className="sidebar">
+                <h3>
+                    Bounty Profiles
+                </h3>
+                <ul style={{ listStyleType: "none", padding: 0 }}>
+                        {(siteData[0].contactProfiles.map((contact,index)=>(
+                            <li>
+                                <Link className="Link" to={`${match.url}/${index}`}>
+                                    {`${contact.firstName} ${contact.lastName}`}
+                                </Link>
+                            </li>   
+                        )))}
+                </ul>
+            </div>
+            <div className="profile">
+                <Switch>
+                    <Route path={`${match.path}/:topicId`}>
+                        <IndivProfile siteData={siteData}/>
+                    </Route>
+                    <Route exact path={match.path}>
+                        <h3>Please select a Profile.</h3>
+                    </Route>
+                </Switch>
+            </div>
         </div>
-
     );
 }
 
