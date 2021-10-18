@@ -57,9 +57,7 @@ function Modal(imageURL) {
                 background: "rgba(0, 0, 0, 0.15)"
             }}
         >
-            <div
-                className="modal"
-            >
+            <div className="modal">
             <h1>Bounty Closeup</h1>
             <img className="profile-large" src={image} alt="Bounty Closeup"/>
             <br />
