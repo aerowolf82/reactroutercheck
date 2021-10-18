@@ -1,0 +1,11 @@
+.Button {
+    font-size: 1.2vw;
+    background-color: rgb(30, 22, 98);
+    color: gainsboro;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 1vh;
+    margin: 0.5vh;
+    width: auto;
+    align-self: center;
+  }
